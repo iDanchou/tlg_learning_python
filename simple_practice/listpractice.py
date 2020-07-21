@@ -15,3 +15,15 @@ print(integers)
 integers.pop() # removes last value from the end of the list
 
 print(integers)
+
+random_nums = [2, 4, 1, 6, 10, 3, 0]
+
+random_nums.reverse()
+
+print(random_nums)
+
+random_nums.reverse()
+
+random_nums.sort()
+
+print(random_nums)
