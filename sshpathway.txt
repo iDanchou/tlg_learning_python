@@ -1,1 +1,0 @@
-git@github.com:iDanchou/tlg_learning_python.git
