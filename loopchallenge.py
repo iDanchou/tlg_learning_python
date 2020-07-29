@@ -36,8 +36,7 @@ elif choose_farm.lower() == 'w farm':
     for every_farm in farms[1]['agriculture']:
         print(every_farm)
 elif choose_farm.lower() == 'se farm':
-    for every_farm in farms[2]['agriculture'][0]:
-        print(every_farm)
+    print(farms[2]['agriculture'][0])
 else:
     print('That doesn\'t look like one of the options.')
 
