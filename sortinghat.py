@@ -119,3 +119,18 @@ elif rave > huff and rave > sly and rave > gry:
     print(f"I've got it, {student} you are RAVENCLAW!")
 else:
     print(f"I've got it, {student} you are SLYTHERIN!")
+
+houses = []
+
+if gry > 2:
+    houses.append('Gryffindor')
+if huff > 2:
+    houses.append('Hufflepuff')
+if sly > 2:
+    houses.append('Slytherin')
+if rave > 2:
+    houses.append('Ravenclaw')
+
+print('With your score, there was potential to study under these houses...')
+for house in houses:
+    print(house)
