@@ -4,7 +4,7 @@ while True:        # sets up an infinite loop condition
     round = round + 1     # increase the round counter
     print('Finish the movie title, "Monty Python\'s The Life of ______"')
     answer = input("Your guess--> ")    # string ans collected from user
-    if answer == 'Brian': # logic to check if user gave correct answer
+    if answer.lower() == 'Brian': # logic to check if user gave correct answer
         print('Correct!')
         break             # break statement escapes the while loop
     elif round == 3:    # logic to ensure round has not yet reached 3
