@@ -10,34 +10,73 @@ char_stat = input('Which stat are you the most curious about? (Strength, Speed, 
 print(f'The stat you chose is {char_stat}!')
 
 while True:
-    if char_name == 'Flash' and char_stat == 'Speed':
+    if char_name.lower() == 'flash' and char_stat.lower() == 'speed':
         print('Flash\'s speed is: ' + heroes['flash']['speed'])
-        break
-    elif char_name == 'Flash' and char_stat == 'Strength':
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'flash' and char_stat.lower() == 'strength':
         print('Flash\'s strength is: ' + heroes['flash']['strength'])
-        break
-    elif char_name == 'Flash' and char_stat == 'Intelligence':
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'flash' and char_stat.lower() == 'intelligence':
         print('Flash\'s intelligence is: ' + heroes['flash']['intelligence'])
-        break
-    elif char_name == 'Batman' and char_stat == 'Speed':
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'batman' and char_stat.lower() == 'speed':
         print('Batman\'s speed is: ' + heroes['batman']['speed'])
-        break
-    elif char_name == 'Batman' and char_stat == 'Strength':
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'batman' and char_stat.lower() == 'strength':
         print('Batman\'s strength is: ' + heroes['batman']['strength'])
-        break
-    elif char_name == 'Batman' and char_stat == 'Intelligence':
-        print('Batman\'s intelligence is: ' + heroes['batman']['intelligence']
-        break
-    elif char_name == 'Superman' and char_stat == 'Speed':
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'batman' and char_stat.lower() == 'intelligence':
+        print('Batman\'s intelligence is: ' + heroes['batman']['intelligence'])
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'superman' and char_stat.lower() == 'speed':
         print('Superman\'s speed is: ' + heroes['superman']['speed'])
-        break
-    elif char_name == 'Superman' and char_stat == 'Strength':
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'superman' and char_stat.lower() == 'strength':
         print('Superman\'s speed is: ' + heroes['superman']['strength'])
-        break
-    elif char_name == 'Superman' and char_stat == 'Intelligence':
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
+    elif char_name.lower() == 'superman' and char_stat.lower() == 'intelligence':
         print('Superman\'s speed is: ' + heroes['superman']['intelligence'])
-        break
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
     else:
         print('I don\'t understand the output. Please try again.')
-        break
-
+        go = input('Would you like to learn more? Enter y or n')
+        if go == 'y':
+            continue
+        else:
+            break
