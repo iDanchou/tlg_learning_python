@@ -23,3 +23,14 @@ class Cheat_Loaded_Dice(Player):
       if self.dice[i] < 6:
         self.dice[i] += 1
       i += 1
+
+class Extra_Roll(Player):
+  def cheat(self):
+    self.dice.append(randint(1,6))
+
+class Cheat_Mulligan(Player):
+  def cheat(self):
+    if sum(self.dice) <= 9:
+      self.dice = []
+      for i in range(3):
+        self.dice.append(randint(1,6)
