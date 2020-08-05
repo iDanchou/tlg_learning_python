@@ -1,9 +1,9 @@
 HACKING CYBERSECURITY ADVENTURE GAME
 
-PARSE TEXT FILES FOR LOGIN ATTEMPTS?
+PARSE TEXT FILES FOR LOGIN ATTEMPTS?  X
 > CREATE FILES FOR GAME
 
-FIND LOGIN INFORMATION THROUGH INITIAL SCREEN OUTPUT
+FIND LOGIN INFORMATION THROUGH INITIAL SCREEN OUTPUT X
 
 PLAY HACKING GAMES TO GET INFORMATION AND IDEAS
 
@@ -12,4 +12,8 @@ touch command to create a FILE
 already at the terminal interface so no opening terminal 
 
 try and except value error
+
+ssh with rsa private key
+
+connect to another user via unprotected wifi
 

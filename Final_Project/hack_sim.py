@@ -1,6 +1,8 @@
+from help_function import helping
+
 login_att = 0
 password = "H@CK3R"
-commands = ["ip addr":"127.0.4.21"]
+commands = {"ip addr":"127.0.4.21"}
 name = input("""Welcome. What is your name?
 >  """)
 
@@ -14,15 +16,17 @@ print(f"USERNAME: {name.upper()}")
 while True:
     if input("PASSWORD: ") == password:
         print("\n")
-        print(f"Successfully logged in after {login_att} attempts")
+        print(f"Successfully logged in after {login_att} attempts\n")
         print("""00100010101100010010011
 01001011110001001001001
-01101110100100010010010
-Great eyes, You're in. Now lets see about gathering some info.\n""")
+01101110100100010010010\n
+Great eyes, You're in. Now lets see about gathering some info.
+Let's check the files and see if there is anything that we can use.\n""")
         break
     else:
         print("\n Remember that thing I said about breadcrumbs? Take another look.\n")
         login_att += 1
         continue
+
 
         
