@@ -1,8 +1,9 @@
-from help_function import helping
+import help_function
+import virus_function
 
-login_att = 0
-password = "H@CK3R"
-commands = {"ip addr":"127.0.4.21"}
+login_att = 0  #  VALUE OF LOGIN ATTEMPTS THAT WILL INCREMENT WITH FAILED ATTEMPTS 
+password = "H@CK3R" #  SETTING PASSWORD THAT USER WILL NEED TO FIND
+commands = {"ip addr":"127.0.4.21"}  #  WORKING ON USING DICT FOR CERTAIN VALUES
 name = input("""Welcome. What is your name?
 >  """)
 
@@ -11,9 +12,9 @@ This will be a test of knowledge and potential.
 I'll need you to focus and keep your eyes active.
 There are more breadcrumbs than you may think.\n""")
 
-print(f"USERNAME: {name.upper()}")
+print(f"USERNAME: {name.upper()}")  # TRANS USER NAME INTO ALL UPPERCASE
  
-while True:
+while True:  # CREATES A WHILE LOOP THAT FORCES USER TO GUESS CORRECT PASSWORD
     if input("PASSWORD: ") == password:
         print("\n")
         print(f"Successfully logged in after {login_att} attempts\n")
@@ -25,8 +26,9 @@ Let's check the files and see if there is anything that we can use.\n""")
         break
     else:
         print("\n Remember that thing I said about breadcrumbs? Take another look.\n")
-        login_att += 1
+        login_att += 1  # FOR EVERY INCORRECT GUESS USER WILL BE REROUTED TO INPUT AGAIN
         continue
 
-
+#  help_function.helping() IMPORTED HELP FUNCTION BEING CALLED
+#  virus_function.virus() IMPORTED VIRUS FUNCTION
         

@@ -1,0 +1,2 @@
+def touch():
+    file = input("> ")
