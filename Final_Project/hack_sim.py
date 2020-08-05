@@ -1,6 +1,6 @@
 login_att = 0
 password = "H@CK3R"
-commands = ["ip addr": "127.0.4.21"]
+commands = ["ip addr":"127.0.4.21"]
 name = input("""Welcome. What is your name?
 >  """)
 
