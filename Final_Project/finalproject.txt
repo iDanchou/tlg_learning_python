@@ -10,3 +10,6 @@ PLAY HACKING GAMES TO GET INFORMATION AND IDEAS
 ls command to view all FILES
 touch command to create a FILE
 already at the terminal interface so no opening terminal 
+
+try and except value error
+
