@@ -30,6 +30,9 @@ If you're not a linux user feel free to use the help command.\n""")
         login_att += 1  # FOR EVERY INCORRECT GUESS USER WILL BE REROUTED TO INPUT AGAIN
         continue
 
+while True:
+    if input() == "help":
+        helping()
+    elif input() == ""
 #  help_function.helping() IMPORTED HELP FUNCTION BEING CALLED
-#  virus_function.virus() IMPORTED VIRUS FUNCTION
-        
+#  virus_function.virus() IMPORTED VIRUS FUNCTION 
