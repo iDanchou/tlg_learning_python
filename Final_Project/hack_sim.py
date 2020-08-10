@@ -1,6 +1,12 @@
 import time
 import sys
 
+print("\n")
+
+from progress_function import probar
+
+print("\n")
+
 def helping():
     print("""\nWe all need a little help sometimes. Here are some commands that can help move you along.\n
     *'ls' to get a look at the files within the system.
@@ -48,6 +54,12 @@ password = "H@CK3R" #  SETTING PASSWORD THAT USER WILL NEED TO FIND
 command = {"ip addr":"127.0.4.21"}  #  WORKING ON USING DICT FOR CERTAIN VALUES
 name = input("""Welcome. What is your name?
 > """)
+
+print("\n")
+
+from loading_function import load
+
+print("\n")
 
 print(f"""~~~~~~ {name.upper()} ENTERS THE H@CK3R SIMULATOR ~~~~~~ \n
 This will be a test of knowledge and potential.
