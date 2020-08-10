@@ -1,17 +1,5 @@
-import time
-import sys
+from tqdm import tqdm
+from time import sleep
 
-toolbar_width = 20
-
-# setup toolbar
-sys.stdout.write("[%s]" % (" " * toolbar_width))
-sys.stdout.flush()
-sys.stdout.write("\b" * (toolbar_width+1)) # return to start of line, after '['
-
-for i in range(toolbar_width):
-    time.sleep(0.1) # do real work here
-    # update the bar
-    sys.stdout.write("-")
-    sys.stdout.flush()
-
-sys.stdout.write("]\n") # this ends the progress bar
+for i in tqdm(range(100)):
+    sleep(0.02)

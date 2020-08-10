@@ -30,11 +30,10 @@ def decrypter():
             continue
 
 def iwlist():
-    print("""\n    SSID: It_Burns_When_IP  CHAN: 6  SEC: SECURED  RATE: 62 Mbit/s
-    SSID: BILL_CLINTERNET  CHAN: 1  SEC: UNSECURED  RATE: 54 Mbit/s
-    SSID: Silence_Of_The_LANS  CHAN: 11  SEC: SECURED  RATE 68 Mbit/s
-    SSID: WINternet_Is_Coming  CHAN: 4  SEC: SECURED  RATE 46 Mbit/s\n
-    """)
+    print("""\n    SSID: It_Burns_When_IP  CHAN: 6  SEC: SECURED  RATE: 62 Mbit/s  FIREWALL: ENABLED
+    SSID: BILL_CLINTERNET  CHAN: 1  SEC: UNSECURED  RATE: 54 Mbit/s  FIREWALL: DISABLED
+    SSID: Silence_Of_The_LANS  CHAN: 11  SEC: SECURED  RATE 68 Mbit/s  FIREWALL: ENABLED
+    SSID: WINternet_Is_Coming  CHAN: 4  SEC: SECURED  RATE 46 Mbit/s  FIREWALL: DISABLED\n""")
 
 def iwconfig():
     print("""\n    Please enter the SSID and password of the wireless network you wish to join.
@@ -85,14 +84,15 @@ If you're not a linux user feel free to use the help command.\n""")
 while True:
     answer = input("")
     if answer.lower() == "help":  # if user types help, the help function will run
+        print("\n")
         helping()
         continue
     elif answer.lower() == "iwlist scan":
+        print("\n")
         iwlist()
-        print("")
         break
     else:
-        print("If you're stuck, type in that help command so we can keep moving.")
+        print("If you're stuck, type in that help command so we can keep moving.\n")
         continue
 
 while True:
