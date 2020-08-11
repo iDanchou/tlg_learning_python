@@ -13,7 +13,5 @@ already at the terminal interface so no opening terminal
 
 try and except value error
 
-ssh with rsa private key
-
 connect to another user via unprotected wifi
 
