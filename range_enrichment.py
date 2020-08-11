@@ -9,12 +9,12 @@
 for x in range(10):  # counting up from 0 to 9
     print(x, end=' ')
 
-print('\n')  # skipping line for readability
+print("\n")  # skipping line for readability
 
 for x in range(4, 32, 2):  # counting up from 4 to 30 by even numbers (including 30)
     print(x, end=' ')
 
-print('\n')  # skipping line for readability
+print("\n")  # skipping line for readability
 
 beer = int(input('> '))  # collecting input for beer
 

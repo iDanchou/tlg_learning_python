@@ -8,7 +8,7 @@ print('Hello! Enter your name.')
 name = input()
 
 secret = random.randint(1,100)
-print(name + 'I have a number 1-100.')
+print(name + ' I have a number 1-100.')
 
 while guesses < 9999:
     print('Take your best guess!')
@@ -26,5 +26,5 @@ while guesses < 9999:
     if guess == secret:
         break
 if guess == secret:
-    print(name, ',', guess, 'was right! You got it!')
+    print(name + ',', guess, 'was right! You got it!')
 

@@ -33,6 +33,6 @@ def random_cat_fact():
     print("========================")
     print(fact_list[random_fact])
 
-name_calling()
-#random_cat_fact()
+#name_calling()
+random_cat_fact()
 #highest_upvotes()
