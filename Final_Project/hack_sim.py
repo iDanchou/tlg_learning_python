@@ -2,6 +2,8 @@ import time
 import sys
 import ipaddress
 from datetime import date
+import random
+import pyfiglet
 
 print("\n")
 
@@ -12,13 +14,12 @@ print("\n")
 def nmap():
     print(f"""\n    {name.lower()}@training-wheels:~$ sudo nmap -sn 192.168.0.1/24
     Starting Nmap 5.21 ( http://nmap.org ) at {date.today()}
-
-    Nmap scan report for 192.168.1.1
-    Host is down.\n
+    Nmap scan report for FOSS 192.168.1.1
+    Host is down.
     MAC Address: E0:A1:D5:72:5A:5C (Unknown)
-    Nmap scan report for 192.168.1.91
-    Host is down.\n
-    Nmap scan report for 192.168.0.6
+    Nmap scan report for WINE 192.168.1.91
+    Host is down.
+    Nmap scan report for TUX 192.168.0.6
     Host is up (0.12s latency).\n""")
 
 def ifconfig():
@@ -36,19 +37,6 @@ def helping():
     *'iwconfig' to configure wireless internet connection.
     *'ifconfig' to find IP address range on the current network.
     *'nmap' is a tool to scan networks.\n""")
-
-def decrypter():
-    while True:
-        print("DECRYPTION TOOL HAS BEEN UPLOADED\n")
-        print("""Alright, now the cracker has been integrated with the system.
-        Let's get a look at that password hash so we can see about cracking it.\n""")
-        enter = input("\nPress ENTER to show the hash. \n")
-        if enter == "":
-            print("$2$y10$6z7GKa9kpDN7kC31.fd0/toY7/x64WUDYBH")
-            break
-        else:
-            print("\nRelax and take the pressure off. It's one key. Let's do it right this time.\n")
-            continue
 
 def iwlist():
     print("""\n    SSID: It_Burns_When_IP  CHAN: 6  SEC: SECURED  RATE: 62 Mbit/s  FIREWALL: ENABLED
@@ -73,6 +61,7 @@ def iwconfig():
             continue
 
 login_att = 1  #  VALUE OF LOGIN ATTEMPTS THAT WILL INCREMENT WITH FAILED ATTEMPTS 
+ascii_banner = pyfiglet.figlet_format("GRADUATION!")
 ssid = ["It_Burns_When_IP".upper(), "Silence_of_the_LANS".upper(), "WINternet_is_Coming".upper()]
 personal_ip = '192.168.0.1'
 password = "H@CK3R" #  SETTING PASSWORD THAT USER WILL NEED TO FIND
@@ -171,8 +160,51 @@ while True:  # NMAP LOOP
         print("\nThis is either where stars are born, or you throw in the towel. Which will it be kid?\n")
         continue
 
-print("""There's a tool known as SSH(Secure Shell) that will allow remote access,
-we'll be able to control that machine as if it was sitting directly in front of us.""")
+print("""\nWe don't have the private ssh key for the machine,
+so we're going to crack this password the old fashioned way. Brute force.\n""")
 
-print("""However, seeing as we don't currently have access to the private ssh key for the machine,
-we're going to crack this password the old fashioned way.""")
+print("When you ran that last command, someone special to Linux appeared.\n")
+
+while True:
+    let_to_num = input("""\nIf you were able to find it, type that into the terminal.
+# """)
+    if let_to_num.lower() == "help":
+        helping()
+    elif let_to_num.lower() == "tux":
+        print("""\nWe're going to take this phrase and run it through a cipher
+to see if the password might be an alphanumerical translation.""")
+        numbers = [ord(let_to_num) - 96 for let_to_num in let_to_num] # CIPHERS LETTERS INTO NUMBERS
+        print("\n")
+        print(numbers)  # PRINTS THE FINAL RESULT
+        break
+    elif let_to_num.lower() == "nmap":  # WILL RERUN THE NMAP FUNCTION FOR THE HINT
+        nmap()
+    else:
+        print("\nLook for one thing that stands apart from the rest.\n")
+        continue
+
+brute = str(input("\nEnter the number you received from the cipher: "))
+
+guess = " "
+count = 0
+while guess != brute:
+    guess = str(random.randint(100000,999999))
+    count += 1
+
+    print("=> " + guess)
+
+    if guess == brute:
+        print("\nThe password was cracked after " + count + " guesses!")
+        print("""\nYou made it the whole way and cracked the code.
+Now that you have the password, type it in after the IP address and enjoy your victory.\n""")
+        break
+
+while True:
+    final = input(f"{name.lower()}@training-wheels:~$ ssh tux@")
+    last_pass = input(f"{name.lower()}@training-wheels:~$ tux@192.168.0.6 ")
+    if final == '192.168.0.1' and last_pass == "202124":
+        print(ascii_banner)
+        sys.exit()
+    else:
+        print("This is the home stretch! Finish strong!")
+        continue
