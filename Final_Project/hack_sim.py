@@ -31,8 +31,6 @@ def ifconfig():
 
 def helping():
     print("""\nWe all need a little help sometimes. Here are some commands that can help move you along.\n
-    *'ls -a' to get a look at the files within the system, the '-a' includes hidden files as well.
-    *'touch' to create a file.
     *'iwlist scan' to see currently available wireless access points.
     *'iwconfig' to configure wireless internet connection.
     *'ifconfig' to find IP address range on the current network.
@@ -188,7 +186,7 @@ brute = str(input("\nEnter the number you received from the cipher: "))
 guess = " "
 count = 0
 while guess != brute:
-    guess = str(random.randint(100000,999999))
+    guess = str(random.randint(100000,300000))
     count += 1
 
     print("=> " + guess)
